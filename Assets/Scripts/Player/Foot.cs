@@ -6,7 +6,7 @@ public class Foot : MonoBehaviour
 {
 
     [SerializeField]
-    private GameObject dust;
+    private ParticleSystem dust;
     private AudioSource foot1;
 
     void Awake()
@@ -20,7 +20,7 @@ public class Foot : MonoBehaviour
         if (other.gameObject.CompareTag("floor"))
         {
             foot1.Play();
-            Instantiate(dust, transform.position, transform.rotation);
+            dust.Play();
         }
     }
 

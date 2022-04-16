@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1853277121435240576}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Head_bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 1853277121435240578}
   - component: {fileID: 1853277121438664880}
   - component: {fileID: 1853277121437534832}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,6 +86,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -97,6 +98,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -118,7 +120,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1853277121435240580}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Hip_left_bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +151,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1853277121435240582}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Head_bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +181,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1853277121435240586}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Body_bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +217,7 @@ GameObject:
   - component: {fileID: 1853277121435240588}
   - component: {fileID: 1853277121438664882}
   - component: {fileID: 1853277121437534834}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: foot_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,6 +260,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -269,6 +272,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -292,7 +296,7 @@ GameObject:
   - component: {fileID: 1853277121435240590}
   - component: {fileID: 1853277121438664892}
   - component: {fileID: 1853277121437534844}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: foot_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,6 +339,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -346,6 +351,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -367,7 +373,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1853277121435240592}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Arm_right_bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,7 +403,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1853277121435240594}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Arm_right_bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -431,7 +437,7 @@ GameObject:
   - component: {fileID: 1853277121435240596}
   - component: {fileID: 1853277121438664894}
   - component: {fileID: 1853277121437534846}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -474,6 +480,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -485,6 +492,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -506,7 +514,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1853277121435240598}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -539,7 +547,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1853277121435240600}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Arm_left_bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -573,7 +581,7 @@ GameObject:
   - component: {fileID: 1853277121435240602}
   - component: {fileID: 1853277121438664890}
   - component: {fileID: 1853277121437534842}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Arm_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -616,6 +624,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -627,6 +636,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -650,7 +660,7 @@ GameObject:
   - component: {fileID: 1853277121435240604}
   - component: {fileID: 1853277121438664888}
   - component: {fileID: 1853277121437534840}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Arm_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -693,6 +703,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -704,6 +715,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -725,7 +737,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1853277121435240606}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Arm_left_bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -760,7 +772,7 @@ GameObject:
   - component: {fileID: 1853277121435540278}
   - component: {fileID: 1853277121435538633}
   - component: {fileID: 1853277121435540279}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy_zombie
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -775,10 +787,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853277121435538632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.1138453, y: -29.191828, z: -203.6383}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1853277121435240598}
+  - {fileID: 2108346332812417194}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -802,9 +815,12 @@ MonoBehaviour:
     type: 3}
   BeShotPrefab: {fileID: 0}
   bombPrefab: {fileID: 1000013462590818, guid: ecdd96beb7f93494880c052dfccf9dc1, type: 3}
-  aggro: {fileID: 0}
-  EnemyMode: 1
+  EnemyMode: 100
   EnemyHp: 0
+  Spawn_effect: {fileID: 0}
+  hit_blood_effect: {fileID: 2302188069724106848}
+  hit_iron_effect: {fileID: 0}
+  bomb_effect: {fileID: 0}
 --- !u!95 &1853277121428285306
 Animator:
   serializedVersion: 3
@@ -854,14 +870,14 @@ NavMeshAgent:
   m_Acceleration: 30
   avoidancePriority: 50
   m_AngularSpeed: 200
-  m_StoppingDistance: 1
+  m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
+  m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 3.5
   m_BaseOffset: 1.5
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!136 &1853277121435540279
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -885,7 +901,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1853277121435240618}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Neck_bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -916,7 +932,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1853277121435240620}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Shoulder_right_bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -947,7 +963,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1853277121435240622}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Shoulder_left_bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -978,7 +994,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1853277121435240624}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Leg_right_bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1013,7 +1029,7 @@ GameObject:
   - component: {fileID: 1853277121435240626}
   - component: {fileID: 1853277121438664884}
   - component: {fileID: 1853277121437534836}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Leg_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1056,6 +1072,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1067,6 +1084,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1088,7 +1106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1853277121435240630}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Leg_right_bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1120,7 +1138,7 @@ GameObject:
   - component: {fileID: 1853277121435240632}
   - component: {fileID: 1853277121438664886}
   - component: {fileID: 1853277121437534838}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Leg_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1163,6 +1181,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1174,6 +1193,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1195,7 +1215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1853277121435240634}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Hip_right_bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1226,7 +1246,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1853277121435240636}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Leg_left_bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1256,7 +1276,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1853277121435240638}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Leg_left_bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1280,3 +1300,109 @@ Transform:
   m_Father: {fileID: 1853277121435240580}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &3086668192436352582
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1853277121435240616}
+    m_Modifications:
+    - target: {fileID: 3829484118126136622, guid: 78ee508e619289e46beb6c43df6e2d53,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3829484132628530806, guid: 78ee508e619289e46beb6c43df6e2d53,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3829484132976738004, guid: 78ee508e619289e46beb6c43df6e2d53,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3829484134597019174, guid: 78ee508e619289e46beb6c43df6e2d53,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3829484134597019174, guid: 78ee508e619289e46beb6c43df6e2d53,
+        type: 3}
+      propertyPath: stopAction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004920029687738092, guid: 78ee508e619289e46beb6c43df6e2d53,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004920029687738092, guid: 78ee508e619289e46beb6c43df6e2d53,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004920029687738092, guid: 78ee508e619289e46beb6c43df6e2d53,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004920029687738092, guid: 78ee508e619289e46beb6c43df6e2d53,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004920029687738092, guid: 78ee508e619289e46beb6c43df6e2d53,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004920029687738092, guid: 78ee508e619289e46beb6c43df6e2d53,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004920029687738092, guid: 78ee508e619289e46beb6c43df6e2d53,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004920029687738092, guid: 78ee508e619289e46beb6c43df6e2d53,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004920029687738092, guid: 78ee508e619289e46beb6c43df6e2d53,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004920029687738092, guid: 78ee508e619289e46beb6c43df6e2d53,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004920029687738092, guid: 78ee508e619289e46beb6c43df6e2d53,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006494960041144996, guid: 78ee508e619289e46beb6c43df6e2d53,
+        type: 3}
+      propertyPath: m_Name
+      value: BulletImpactFleshBigEffect
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 78ee508e619289e46beb6c43df6e2d53, type: 3}
+--- !u!4 &2108346332812417194 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4004920029687738092, guid: 78ee508e619289e46beb6c43df6e2d53,
+    type: 3}
+  m_PrefabInstance: {fileID: 3086668192436352582}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &2302188069724106848 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3829484134597019174, guid: 78ee508e619289e46beb6c43df6e2d53,
+    type: 3}
+  m_PrefabInstance: {fileID: 3086668192436352582}
+  m_PrefabAsset: {fileID: 0}

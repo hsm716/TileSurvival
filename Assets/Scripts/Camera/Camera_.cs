@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Camera_ : MonoBehaviour
 {
+    public static Camera_ instance;
     [SerializeField]
     private GameObject player;
     [SerializeField]
@@ -36,7 +37,8 @@ public class Camera_ : MonoBehaviour
 
     void Awake()
     {
-     //   initialPosition = new Vector3(5f, 0f, 0f);
+        instance = this;
+        
         cameraPosition = transform.position;
 
         Application.targetFrameRate = 60;
@@ -50,10 +52,10 @@ public class Camera_ : MonoBehaviour
         cameraPosition.z = player.transform.position.z + offsetZ;
   
 
-        cameraPosition.x = Mathf.Clamp(cameraPosition.x, -67.4f, 57.6f);
+/*        cameraPosition.x = Mathf.Clamp(cameraPosition.x, -54.80301f, 54.40301f);
 
-        cameraPosition.z = Mathf.Clamp(cameraPosition.z,-306.2f, -177.3f);
-
+        cameraPosition.z = Mathf.Clamp(cameraPosition.z, -38.74083f, 38.74083f);
+*/
 
 
         transform.position = cameraPosition;

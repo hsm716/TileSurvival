@@ -8,6 +8,8 @@ using PlayFab.ClientModels;
 
 public class Player : MonoBehaviour
 {
+    public static Player instance;
+    public Transform tr;
     private Rigidbody rgbd;
     private float h;
     private float v;
@@ -27,7 +29,7 @@ public class Player : MonoBehaviour
     private Image bloodScreen;
     [SerializeField]
     private Image bloodScreen_back;
-    
+
     //피격시 사운드
     [SerializeField]
     private AudioSource uck;
@@ -45,7 +47,7 @@ public class Player : MonoBehaviour
     private Text Total_socre;
     [SerializeField]
     private Text Time_;
-    
+
     //플레이어 화염 방사기
     [SerializeField]
     private GameObject FlameObj;
@@ -61,7 +63,7 @@ public class Player : MonoBehaviour
 
     //플레이어 이동속도 or 대쉬속도 or 회전 속도
     [SerializeField]
-    private float moveSpeed=10f;
+    private float moveSpeed = 10f;
     private float runSpeed;
     [SerializeField]
     private float rotateSpeed;
@@ -73,8 +75,13 @@ public class Player : MonoBehaviour
     private Vector3 mpTemp;
     bool TurnShotOn = false;
 
+    public LayerMask whatIsEnemy;
+    Collider[] enemies;
+
     void Awake()
     {
+        instance = this;
+        tr = this.transform;
         animator = GetComponent<Animator>();
         bloodScreen.gameObject.SetActive(false);
         movement = Vector3.zero;
@@ -86,7 +93,7 @@ public class Player : MonoBehaviour
         FlameGage = 0f;
         gunBulletGage = 0;
         Finish_UI.SetActive(false);
-       
+
 
     }
     IEnumerator ShowBloodScreen()
@@ -101,35 +108,8 @@ public class Player : MonoBehaviour
         bloodScreen_back.color = Color.clear;
 
     }
-    
-    // Update is called once per frame
-   /* public void Pickup(GameObject item)
-    {
-        SetEquip(item, true);
 
-        isPicking = true;
-    }
-    void Drop()
-    {
-        GameObject item = playerEquipPoint.GetComponentInChildren<Rigidbody>().gameObject;
-        SetEquip(item, false);
 
-        playerEquipPoint.transform.DetachChildren();
-        isPicking = false;
-    }  
-    void SetEquip(GameObject item,bool isEquip)
-    {
-        Collider[] itemColliders = item.GetComponents<Collider>();
-        Rigidbody itemRigidbody = item.GetComponent<Rigidbody>();
-
-        foreach(Collider itemCollider in itemColliders)
-        {
-            itemCollider.enabled = !isEquip;
-        }
-        itemRigidbody.isKinematic = isEquip;
-
-    }
-    */
     private void FixedUpdate()
     {
 
@@ -152,9 +132,9 @@ public class Player : MonoBehaviour
         {
             Statistics = new List<StatisticUpdate>
                 {
-                    new StatisticUpdate { StatisticName = "Score", Value =Hp_bar.point_}, //스코어 필드에 현재 점수 정보를 업데이트함 (서버 내에서 본인의 기록된 점수보다 높아야 갱신되는 것으로 설정 되있음)
-                    new StatisticUpdate { StatisticName = "Time_m",Value=Hp_bar.m},
-                    new StatisticUpdate { StatisticName = "Time_s",Value=(int)Hp_bar.s}
+                    new StatisticUpdate { StatisticName = "Score", Value =GameManager.instance.point_}, //스코어 필드에 현재 점수 정보를 업데이트함 (서버 내에서 본인의 기록된 점수보다 높아야 갱신되는 것으로 설정 되있음)
+                    new StatisticUpdate { StatisticName = "Time_m",Value=GameManager.instance.m},
+                    new StatisticUpdate { StatisticName = "Time_s",Value=GameManager.instance.s}
                 }
         },
            (result) => {; },
@@ -166,15 +146,17 @@ public class Player : MonoBehaviour
     {
         Time.timeScale = 0;
     }
+
     void GunMode()
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        enemies = Physics.OverlapSphere(transform.position, 50f, whatIsEnemy);
+        //GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         float dist = Mathf.Infinity;
         Vector3 nearObj = Vector3.zero;
-        foreach(var enemy in enemies)
+        foreach (var enemy in enemies)
         {
             float dist_cost = Vector3.Distance(transform.position, enemy.transform.position);
-            if( dist > dist_cost)
+            if (dist > dist_cost)
             {
                 dist = dist_cost;
                 nearObj = enemy.transform.position;
@@ -193,41 +175,12 @@ public class Player : MonoBehaviour
         {
             Player_HP = 100;
         }
-        else if (Player_HP <= 0)
-        {
-            pauseNow();
-            Finish_UI.SetActive(true);
-            SetStat();
-            Total_socre.text = "Total_socre : " + Hp_bar.point_;
-            Time_.text = "Time  \t\t\t : " + Hp_bar.m + "m " + (int)Hp_bar.s + "s";
-            
 
-        }
         //Gun
         if (gunBulletGage > 0)
         {
             GunMode();
-            /*if (Input.touchCount > 0)
-            {
-                
-                Touch touch = Input.GetTouch(1);
-                if (touch.phase == TouchPhase.Began)
-                {
-                    pos = (touch.position);
-                    ShotPoint.Set(pos.x - 550, 0, pos.y - 920);
-                }
-                if (touch.phase == TouchPhase.Moved)
-                {
-                    pos = (touch.position);
-                    ShotPoint.Set(pos.x - 550, 0, pos.y - 920);
-                }
-                if (touch.phase == TouchPhase.Ended)
-                {
-                    pos = (touch.position);
-                    ShotPoint.Set(pos.x - 550, 0, pos.y - 920);
-                }
-            }*/
-            TurnShotOn =true;
+            TurnShotOn = true;
             GunObj.SetActive(true);
             animator.SetBool("isGun", true);
         }
@@ -253,8 +206,8 @@ public class Player : MonoBehaviour
         if (FlameGage > 0)
         {
             FlameObj.transform.GetChild(0).GetComponent<ParticleSystem>().Play();
-           //FlameObj.SetActive(true);
-           
+            //FlameObj.SetActive(true);
+
         }
         else if (FlameGage <= 0)
         {
@@ -264,6 +217,20 @@ public class Player : MonoBehaviour
         }
 
     }
+    public void TakeDamage(float dmg)
+    {
+        Player_HP -= dmg;
+        if (Player_HP <= 0)
+        {
+            pauseNow();
+            
+            SetStat();
+            Total_socre.text = "Total_socre : " + GameManager.instance.point_;
+            Time_.text = "Time  \t\t\t : " + GameManager.instance.m + "m " + GameManager.instance.s + "s";
+            Finish_UI.SetActive(true);
+        }
+    }
+
     void Run()
     {
         movement.Set(h, 0, v);

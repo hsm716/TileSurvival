@@ -10,7 +10,7 @@ public class Dash_act : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            other.GetComponent<Enemy>().EnemyHp -= 20f;
+            other.GetComponent<Enemy>().TakeDamage(20f,0, Quaternion.identity);
             euk.Play();
         }
     }

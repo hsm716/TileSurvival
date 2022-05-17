@@ -15,9 +15,13 @@ public class EnemySpawn : MonoBehaviour
     private float armor_xPos;
     private float armor_zPos;
 
+    private float fly_xPos;
+    private float fly_zPos;
+
     private Vector3 nor_RandomVector;
     private Vector3 bomb_RandomVector;
     private Vector3 armor_RandomVector;
+    private Vector3 fly_RandomVector;
 
     //public int stage = 2;
 
@@ -31,6 +35,8 @@ public class EnemySpawn : MonoBehaviour
     private float Armor_SpawnTime = 60f;
     [SerializeField]
     private float Zombie_SpawnTime = 1f;
+    [SerializeField]
+    private float Fly_SpawnTime = 30f;
 
     void Start()
     {
@@ -40,6 +46,7 @@ public class EnemySpawn : MonoBehaviour
             StartCoroutine(normal_spawn());
             StartCoroutine(Bomb_spawn());
             StartCoroutine(Armor_spawn());
+            StartCoroutine(Fly_spawn());
         }
         else if (type == 1)
         {
@@ -115,6 +122,7 @@ public class EnemySpawn : MonoBehaviour
                     nor_RandomVector = new Vector3(nor_xPos, 0.0f, nor_zPos);
                     GameObject t_object = Pooling_Control.instance.GetQueue(100);
                     t_object.transform.position = this.gameObject.transform.position + nor_RandomVector;
+                    t_object.SetActive(true);
                     //t_object.GetComponent<Enemy>().Spawn_effect.Play();
                 }
             }
@@ -143,6 +151,7 @@ public class EnemySpawn : MonoBehaviour
                     nor_RandomVector = new Vector3(nor_xPos, 0.0f, nor_zPos);
                     GameObject t_object = Pooling_Control.instance.GetQueue(1);
                     t_object.transform.position = this.gameObject.transform.position + nor_RandomVector;
+                    t_object.SetActive(true);
                     t_object.GetComponent<Enemy>().Spawn_effect.Play();
                 }
             }
@@ -169,10 +178,36 @@ public class EnemySpawn : MonoBehaviour
                     bomb_RandomVector = new Vector3(bomb_xPos, 0.0f, bomb_zPos);
                     GameObject te_object = Pooling_Control.instance.GetQueue(2);
                     te_object.transform.position = gameObject.transform.position + bomb_RandomVector;
+                    te_object.SetActive(true);
                     te_object.GetComponent<Enemy>().Spawn_effect.Play();
                 }
             }
             yield return new WaitForSeconds(Bomb_SpawnTime);
+        }
+    }
+    IEnumerator Fly_spawn()
+    {
+        yield return new WaitForSeconds(30f);
+        while (true)
+        {
+            if (Pooling_Control.instance.Fly_queue.Count != 0)
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    if (Pooling_Control.instance.Fly_queue.Count == 0)
+                    {
+                        break;
+                    }
+                    fly_xPos = Random.Range(-2, 2);
+                    fly_zPos = Random.Range(-2, 2);
+                    fly_RandomVector = new Vector3(fly_xPos, 0.0f, fly_zPos);
+                    GameObject te_object = Pooling_Control.instance.GetQueue(4);
+                    te_object.transform.position = gameObject.transform.position + fly_RandomVector;
+                    te_object.SetActive(true);
+                    te_object.GetComponent<Enemy>().Spawn_effect.Play();
+                }
+            }
+            yield return new WaitForSeconds(Fly_SpawnTime);
         }
     }
     IEnumerator Armor_spawn()
@@ -194,6 +229,7 @@ public class EnemySpawn : MonoBehaviour
 
                     GameObject tem_object = Pooling_Control.instance.GetQueue(3);
                     tem_object.transform.position = gameObject.transform.position + armor_RandomVector;
+                    tem_object.SetActive(true);
                     tem_object.GetComponent<Enemy>().Spawn_effect.Play();
                 }
             }

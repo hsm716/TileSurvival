@@ -15,13 +15,13 @@ public class Bullet : MonoBehaviour
     }
     void ResetBullet()
     {
-        Pooling_Control.instance.InsertQueue(this.gameObject, 4);
+        Pooling_Control.instance.InsertQueue(this.gameObject, 200);
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            other.gameObject.GetComponent<Enemy>().EnemyHp -= 100;
+            other.gameObject.GetComponent<Enemy>().TakeDamage(100,0, Quaternion.identity);
             GetComponent<Rigidbody>().velocity = Vector3.zero;
             Collider col = GetComponent<SphereCollider>();
             col.enabled = false;
@@ -43,7 +43,8 @@ public class Bullet : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         Collider col = GetComponent<SphereCollider>();
         col.enabled = true;
-        Pooling_Control.instance.InsertQueue(this.gameObject, 4);
+        ResetBullet();
+        //Pooling_Control.instance.InsertQueue(this.gameObject, 200);
     }
 
 

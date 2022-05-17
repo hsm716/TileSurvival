@@ -20,10 +20,15 @@ public class gun_act : MonoBehaviour
     }
     private void Update()
     {
-        if (Player.instance.gunBulletGage == 100)
+        if (Player.instance.gunBulletGage == 100&&!isAct)
         {
+            isAct = true;
             StartCoroutine(bullet_spawn(0.1f));
             StartCoroutine(flash_spawn());
+        }
+        if (Player.instance.gunBulletGage <= 0)
+        {
+            isAct = false;
         }
 
     }
@@ -33,10 +38,11 @@ public class gun_act : MonoBehaviour
         while (Player.instance.gunBulletGage>=0)
         {
             shoot.Play();
-            GameObject GO = Pooling_Control.instance.GetQueue(4);
+            GameObject GO = Pooling_Control.instance.GetQueue(200);
             GO.transform.position = ShotPos.position;
             GO.transform.rotation = ShotPos.rotation;
             GO.SetActive(true);
+            GO.GetComponent<Bullet>().LifeTime();
 
             Rigidbody b_rgbd = GO.GetComponent<Rigidbody>();
             b_rgbd.velocity = Vector3.zero;
@@ -45,6 +51,7 @@ public class gun_act : MonoBehaviour
             Player.instance.gunBulletGage -= 1;
             yield return new WaitForSeconds(sec);
         }
+
     }
     IEnumerator flash_spawn()
     {

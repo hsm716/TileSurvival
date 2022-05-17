@@ -8,7 +8,7 @@ public class Spike_act : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<Enemy>().EnemyHp -= 10f;
+            collision.gameObject.GetComponent<Enemy>().TakeDamage(10,0, Quaternion.identity);
         }
     }
 }

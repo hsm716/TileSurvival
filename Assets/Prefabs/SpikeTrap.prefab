@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1993373421376872430}
   - component: {fileID: 2003681882860747284}
   - component: {fileID: 2012007687000759654}
-  - component: {fileID: 1998246599634620470}
   - component: {fileID: 1998246599634620471}
   - component: {fileID: 1998246599634620465}
+  - component: {fileID: 6236560752717587057}
   m_Layer: 0
   m_Name: SpearD (6)
   m_TagString: spike
@@ -57,6 +57,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -68,6 +70,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -80,18 +83,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1998246599634620470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1998246599634620464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c164202297e052540a1923be2f569bb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &1998246599634620471
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -118,6 +110,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.11754171, y: 1.7923552, z: 0.23569444}
   m_Center: {x: -0.0000076293945, y: -0.08774084, z: -0.000000052981907}
+--- !u!114 &6236560752717587057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998246599634620464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26456b2358381e044960ebbe0366dac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1998489134415572008
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,9 +133,9 @@ GameObject:
   - component: {fileID: 1993054947994907700}
   - component: {fileID: 2004033832871834560}
   - component: {fileID: 2012214446249549566}
-  - component: {fileID: 1998489134415572014}
   - component: {fileID: 1998489134415572015}
   - component: {fileID: 1998489134415572009}
+  - component: {fileID: 170059307999159856}
   m_Layer: 0
   m_Name: SpearD (4)
   m_TagString: spike
@@ -175,6 +179,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -186,6 +192,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -198,18 +205,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1998489134415572014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1998489134415572008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c164202297e052540a1923be2f569bb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &1998489134415572015
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -236,6 +232,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.11754171, y: 1.8002318, z: 0.23569444}
   m_Center: {x: -0.0000038146973, y: -0.08380151, z: 0.000000066227386}
+--- !u!114 &170059307999159856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998489134415572008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26456b2358381e044960ebbe0366dac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1998586571492871232
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,9 +255,9 @@ GameObject:
   - component: {fileID: 1996954153621424834}
   - component: {fileID: 2003909510106630198}
   - component: {fileID: 2011255972715516064}
-  - component: {fileID: 1998586571492871238}
   - component: {fileID: 1998586571492871239}
   - component: {fileID: 1998586571492871233}
+  - component: {fileID: 9089113341070854012}
   m_Layer: 0
   m_Name: SpearD (1)
   m_TagString: spike
@@ -293,6 +301,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -304,6 +314,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -316,18 +327,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1998586571492871238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1998586571492871232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c164202297e052540a1923be2f569bb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &1998586571492871239
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -354,6 +354,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.11754171, y: 1.7608459, z: 0.23569444}
   m_Center: {x: -0.0000038146973, y: -0.10349449, z: 0.00000018543668}
+--- !u!114 &9089113341070854012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998586571492871232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26456b2358381e044960ebbe0366dac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1998889141785749986
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,9 +377,9 @@ GameObject:
   - component: {fileID: 1997107400148709792}
   - component: {fileID: 2004081853690979728}
   - component: {fileID: 2011441412723754344}
-  - component: {fileID: 1998889141785749984}
   - component: {fileID: 1998889141785749985}
   - component: {fileID: 1998889141785749987}
+  - component: {fileID: 3448504964514402142}
   m_Layer: 0
   m_Name: SpearD (3)
   m_TagString: spike
@@ -411,6 +423,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -422,6 +436,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -434,18 +449,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1998889141785749984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1998889141785749986}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c164202297e052540a1923be2f569bb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &1998889141785749985
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -472,6 +476,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.11754171, y: 1.7741086, z: 0.23569444}
   m_Center: {x: -0.000003814697, y: -0.09686437, z: -0.000000052981907}
+--- !u!114 &3448504964514402142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998889141785749986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26456b2358381e044960ebbe0366dac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1998988391986548012
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,9 +499,9 @@ GameObject:
   - component: {fileID: 1997002059354129256}
   - component: {fileID: 2003587240992991914}
   - component: {fileID: 2012247862791982146}
-  - component: {fileID: 1998988391986548002}
   - component: {fileID: 1998988391986548003}
   - component: {fileID: 1998988391986548013}
+  - component: {fileID: 6324780332169289770}
   m_Layer: 0
   m_Name: SpearD (5)
   m_TagString: spike
@@ -529,6 +545,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -540,6 +558,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -552,18 +571,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1998988391986548002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1998988391986548012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c164202297e052540a1923be2f569bb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &1998988391986548003
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -590,6 +598,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.11754171, y: 1.8052434, z: 0.23569444}
   m_Center: {x: -0.0000076293945, y: -0.08129657, z: 0.00000018543668}
+--- !u!114 &6324780332169289770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998988391986548012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26456b2358381e044960ebbe0366dac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1999023614719355478
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,10 +621,10 @@ GameObject:
   - component: {fileID: 1992918275420895646}
   - component: {fileID: 2003919151726217420}
   - component: {fileID: 2011489383095890066}
-  - component: {fileID: 1999023614719355477}
   - component: {fileID: 1999023614719355476}
   - component: {fileID: 1999023614719355479}
   - component: {fileID: 1999023614719355498}
+  - component: {fileID: 4785360883003020031}
   m_Layer: 0
   m_Name: SpikeTrap
   m_TagString: Untagged
@@ -657,6 +677,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -668,6 +690,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -680,19 +703,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1999023614719355477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1999023614719355478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9c5fca88226bad44a4add7bc99f4c4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spikeTrapAnim: {fileID: 0}
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &1999023614719355476
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -821,6 +832,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4785360883003020031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999023614719355478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5caec27214502de46b2cbfc4b32a7813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spikeTrapAnim: {fileID: 1999023614719355479}
 --- !u!1 &1999076897863749578
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,9 +856,9 @@ GameObject:
   - component: {fileID: 1993325316808400586}
   - component: {fileID: 2003941503068069950}
   - component: {fileID: 2011165245415741442}
-  - component: {fileID: 1999076897863749576}
   - component: {fileID: 1999076897863749577}
   - component: {fileID: 1999076897863749579}
+  - component: {fileID: 6588353128131092916}
   m_Layer: 0
   m_Name: SpearD (7)
   m_TagString: spike
@@ -878,6 +902,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -889,6 +915,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -901,18 +928,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1999076897863749576
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1999076897863749578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c164202297e052540a1923be2f569bb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &1999076897863749577
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -939,6 +955,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.11754171, y: 1.764096, z: 0.23569444}
   m_Center: {x: -0.0000038146973, y: -0.101870224, z: 0.000000066227386}
+--- !u!114 &6588353128131092916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999076897863749578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26456b2358381e044960ebbe0366dac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1999150004237993822
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,9 +978,9 @@ GameObject:
   - component: {fileID: 1997048804467220266}
   - component: {fileID: 2003547498061129086}
   - component: {fileID: 2011562674984502130}
-  - component: {fileID: 1999150004237993820}
   - component: {fileID: 1999150004237993821}
   - component: {fileID: 1999150004237993823}
+  - component: {fileID: 3080030307448169819}
   m_Layer: 0
   m_Name: SpearD
   m_TagString: spike
@@ -996,6 +1024,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1007,6 +1037,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1019,18 +1050,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1999150004237993820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1999150004237993822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c164202297e052540a1923be2f569bb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &1999150004237993821
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1057,6 +1077,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.11754171, y: 1.7650017, z: 0.23569444}
   m_Center: {x: -0.000003814697, y: -0.10141687, z: -0.000000052981907}
+--- !u!114 &3080030307448169819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999150004237993822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26456b2358381e044960ebbe0366dac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1999179014072087300
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,9 +1100,9 @@ GameObject:
   - component: {fileID: 1993393479623000560}
   - component: {fileID: 2004065505188012712}
   - component: {fileID: 2011999267542222562}
-  - component: {fileID: 1999179014072087322}
   - component: {fileID: 1999179014072087323}
   - component: {fileID: 1999179014072087301}
+  - component: {fileID: 4764336055993302078}
   m_Layer: 0
   m_Name: SpearD (8)
   m_TagString: spike
@@ -1114,6 +1146,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1125,6 +1159,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1137,18 +1172,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1999179014072087322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1999179014072087300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c164202297e052540a1923be2f569bb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &1999179014072087323
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1175,6 +1199,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.11754171, y: 1.7787966, z: 0.23569444}
   m_Center: {x: -0.0000076293945, y: -0.09451972, z: -0.000000052981907}
+--- !u!114 &4764336055993302078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999179014072087300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26456b2358381e044960ebbe0366dac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1999276427789809634
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,9 +1222,9 @@ GameObject:
   - component: {fileID: 1993317872706743394}
   - component: {fileID: 2003914644756967366}
   - component: {fileID: 2012212720124724524}
-  - component: {fileID: 1999276427789809632}
   - component: {fileID: 1999276427789809633}
   - component: {fileID: 1999276427789809635}
+  - component: {fileID: 2924043408135551432}
   m_Layer: 0
   m_Name: SpearD (2)
   m_TagString: spike
@@ -1232,6 +1268,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1243,6 +1281,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1255,18 +1294,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1999276427789809632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1999276427789809634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c164202297e052540a1923be2f569bb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &1999276427789809633
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1293,3 +1321,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.11754171, y: 1.7639194, z: 0.23569444}
   m_Center: {x: -0.0000076293945, y: -0.10195804, z: 0.00000018543668}
+--- !u!114 &2924043408135551432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999276427789809634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26456b2358381e044960ebbe0366dac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

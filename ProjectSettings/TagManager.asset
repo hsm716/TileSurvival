@@ -28,9 +28,9 @@ TagManager:
   - Ground
   - Postprocessing
   - Enemy
-  - 
-  - 
-  - 
+  - Player
+  - Bullet
+  - PlayerAttack
   - 
   - 
   - 

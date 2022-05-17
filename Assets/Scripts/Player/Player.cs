@@ -96,6 +96,7 @@ public class Player : MonoBehaviour
 
 
     }
+    
     IEnumerator ShowBloodScreen()
     {
         bloodScreen.gameObject.SetActive(true);
@@ -113,13 +114,15 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
 
-
+        rgbd.velocity = new Vector3(0, 0, 0);
         if (TurnShotOn)
         {
+            animator.SetBool("isGun", true);
             TurnShot();
         }
         else
         {
+            animator.SetBool("isGun", false);
             Turn();
         }
         Run();
@@ -164,9 +167,10 @@ public class Player : MonoBehaviour
         }
         animator.transform.forward = nearObj - transform.position;
     }
+    
     void Update()
     {
-        rgbd.velocity = new Vector3(0, 0, 0);
+        
         h = joystick.Horizontal;
         v = joystick.Vertical;
 
@@ -219,6 +223,7 @@ public class Player : MonoBehaviour
     }
     public void TakeDamage(float dmg)
     {
+        StartCoroutine(ShowBloodScreen());
         Player_HP -= dmg;
         if (Player_HP <= 0)
         {
@@ -230,6 +235,7 @@ public class Player : MonoBehaviour
             Finish_UI.SetActive(true);
         }
     }
+
 
     void Run()
     {
@@ -264,14 +270,5 @@ public class Player : MonoBehaviour
         
         Quaternion newRotation = Quaternion.LookRotation(ShotPoint);
         rgbd.rotation = Quaternion.Slerp(rgbd.rotation, newRotation, rotateSpeed * Time.deltaTime);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            uck.Play();
-            StartCoroutine(ShowBloodScreen());
-        }
     }
 }

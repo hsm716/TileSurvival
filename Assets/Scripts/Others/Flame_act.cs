@@ -10,7 +10,7 @@ public class Flame_act : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            other.GetComponent<Enemy>().EnemyHp -= 5f;
+            other.GetComponent<Enemy>().TakeDamage(5f,0, Quaternion.identity);
             euk.Play();
         }
     }

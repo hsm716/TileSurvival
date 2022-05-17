@@ -53,7 +53,7 @@ public class Bomb : MonoBehaviour
             
             if (timer > waitingTime)
             {
-                
+                transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
                 timer = 0;
                 Effect.Play();
                 camera.VibrateForTime(0.5f);
@@ -62,20 +62,21 @@ public class Bomb : MonoBehaviour
                 //추출한 Collider 객체에 폭발력 전달
                 foreach (Collider coll in colls)
                 {
-                    Rigidbody rbody = coll.GetComponent<Rigidbody>();
+/*                    Rigidbody rbody = coll.GetComponent<Rigidbody>();
                     if (rbody != null)
                     {
                         rbody.mass = 1.0f;
                         rbody.AddExplosionForce(500f, transform.position, 10.0f, 300.0f);
-                    }
+                    }*/
                     if (coll.gameObject.CompareTag("Enemy"))
                     {
-                        coll.gameObject.GetComponent<Enemy>().EnemyHp -= 200f;
+                        coll.gameObject.GetComponent<Enemy>().TakeDamage(200f,1, transform.rotation);
                     }
                 }
 
                 Onoff = false;
                 Collider[] bomb_cols = GetComponents<SphereCollider>();
+                
                 for(int i = 0; i < bomb_cols.Length;i++) {
                     bomb_cols[i].enabled = false;
                 }

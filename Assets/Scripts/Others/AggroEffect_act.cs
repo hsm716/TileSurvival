@@ -8,7 +8,7 @@ public class AggroEffect_act : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            other.GetComponent<Enemy>().EnemyHp -= 15f;
+            other.GetComponent<Enemy>().TakeDamage(15f,0, Quaternion.identity);
         }
     }
 }

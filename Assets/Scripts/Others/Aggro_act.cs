@@ -15,12 +15,13 @@ public class Aggro_act : MonoBehaviour
     {
         yield return new WaitForSeconds(sec);
         AggroEffect.Play();
-        transform.GetChild(0).gameObject.SetActive(false);
         this.gameObject.tag = "Untagged";
         Pooling_Control.instance.targeting_queue.RemoveAt(0);
+        transform.GetChild(0).gameObject.SetActive(false);
+        
         yield return new WaitForSeconds(1.5f);
         transform.GetChild(0).gameObject.SetActive(true);
-        Pooling_Control.instance.InsertQueue(this.gameObject, 5);
+        Pooling_Control.instance.InsertQueue(this.gameObject, 201);
     }
 
 }

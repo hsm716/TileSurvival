@@ -9,8 +9,8 @@ public class Tile_Control : MonoBehaviour
     public MeshRenderer mr;
     Color[] colors = { Color.white, Color.red, new Color(0.127759f, 0.8428385f, 0.9339623f),Color.black, new Color(0.4433962f, 0.2677765f,0f), new Color(0.1f, 0.8f, 0.1f) };
     public Transform[] bulletShotPos;
-    
 
+    public GameObject FireBall_tmp;
     public int select_dir;
 
     bool isAct = false;
@@ -40,6 +40,14 @@ public class Tile_Control : MonoBehaviour
                     break;
                 case Type.flame:
                     Player.instance.FlameGage=100;
+                    GameObject go1 = Instantiate(FireBall_tmp, bulletShotPos[1].position, bulletShotPos[1].rotation);
+                    go1.GetComponent<Rigidbody>().AddForce((bulletShotPos[1].forward + transform.up)*10f, ForceMode.Impulse);
+                    GameObject go2 = Instantiate(FireBall_tmp, bulletShotPos[3].position, bulletShotPos[3].rotation);
+                    go2.GetComponent<Rigidbody>().AddForce((bulletShotPos[3].forward + transform.up) * 10f, ForceMode.Impulse);
+                    GameObject go3 = Instantiate(FireBall_tmp, bulletShotPos[5].position, bulletShotPos[5].rotation);
+                    go3.GetComponent<Rigidbody>().AddForce((bulletShotPos[5].forward + transform.up) * 10f, ForceMode.Impulse);
+                    GameObject go4 = Instantiate(FireBall_tmp, bulletShotPos[7].position, bulletShotPos[7].rotation);
+                    go4.GetComponent<Rigidbody>().AddForce((bulletShotPos[7].forward+ transform.up) * 10f, ForceMode.Impulse);
                     break;
                 case Type.gun:
                     Player.instance.gunBulletGage = 100;
@@ -71,6 +79,7 @@ public class Tile_Control : MonoBehaviour
             effect_StepOnTile.SetActive(true);
             effect_StepOnTile.GetComponent<ParticleSystem>().Play();
             effect_StepOnTile.GetComponent<LifeCycle>().LifeTime();
+            this.gameObject.SetActive(false);
             Invoke("FormChange", 0.1f);
         }
     }
@@ -119,9 +128,9 @@ public class Tile_Control : MonoBehaviour
         int r_idx = Random.Range(0, 9);
         float r_r = Random.Range(-5f, 5f);
         float r_c = Random.Range(-5f, 5f);
-        float r_y = Random.Range(-0.01f, 0.01f);
+        float r_y = Random.Range(0.1f, 0.2f);
         transform.position = GameManager.instance.Tile_SpawnSpots[r_idx].position + new Vector3(r_r, r_y, r_c);
-
+        this.gameObject.SetActive(true);
         int rand_value = Random.Range(1, 100);
         int type_idx = 0;
         if (rand_value >= 85 && rand_value <= 89)

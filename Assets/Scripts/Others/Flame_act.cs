@@ -10,6 +10,7 @@ public class Flame_act : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
+            other.GetComponent<Enemy>().state_fire_effect.Play();
             other.GetComponent<Enemy>().TakeDamage(5f,0, Quaternion.identity);
             euk.Play();
         }

@@ -80,7 +80,7 @@ public class Tile_Control : MonoBehaviour
             effect_StepOnTile.GetComponent<ParticleSystem>().Play();
             effect_StepOnTile.GetComponent<LifeCycle>().LifeTime();
             this.gameObject.SetActive(false);
-            Invoke("FormChange", 0.1f);
+            Invoke(nameof(FormChange), 0.1f);
         }
     }
     private void Update()

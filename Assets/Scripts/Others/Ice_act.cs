@@ -15,11 +15,11 @@ public class Ice_act : MonoBehaviour
     }
     public void Act()
     {
-        Invoke("LifeCycle", 4f);
+        Invoke(nameof(LifeCycle_), 4f);
     }
-    void LifeCycle()
+    void LifeCycle_()
     {
         if(main_body)
-            Pooling_Control.instance.InsertQueue(this.gameObject, 8);
+            Pooling_Control.instance.InsertQueue(this.gameObject, 202);
     }
 }

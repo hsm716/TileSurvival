@@ -165,7 +165,8 @@ public class Player : MonoBehaviour
                 nearObj = enemy.transform.position;
             }
         }
-        animator.transform.forward = nearObj - transform.position;
+        Vector3 tmp = nearObj - transform.position;
+        animator.transform.forward = new Vector3(tmp.x,0f,tmp.z);
     }
     
     void Update()

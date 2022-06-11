@@ -41,7 +41,7 @@ public class Camera_ : MonoBehaviour
         
         cameraPosition = transform.position;
 
-        Application.targetFrameRate = 60;
+        //Application.targetFrameRate = 60;
     }
 
     // Update is called once per frame

@@ -22,7 +22,6 @@ public class Enemy : MonoBehaviour
     public GameObject bloodPrefab;
     public GameObject BeShotPrefab;
     public GameObject bombPrefab;
-    public ParticleSystem state_fire_effect;
 
     //GameObject player;
     bool isAggro;
@@ -52,7 +51,7 @@ public class Enemy : MonoBehaviour
        
 
         //player = GameObject.FindGameObjectWithTag("Player");
-        player = Player.instance;
+        //player = Player.instance;
         rgbd = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         nav = GetComponent<NavMeshAgent>();

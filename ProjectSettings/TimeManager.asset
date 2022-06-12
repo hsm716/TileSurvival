@@ -3,7 +3,12 @@
 --- !u!5 &1
 TimeManager:
   m_ObjectHideFlags: 0
+<<<<<<< HEAD
   Fixed Timestep: 0.033
   Maximum Allowed Timestep: 0.334
+=======
+  Fixed Timestep: 0.02
+  Maximum Allowed Timestep: 0.33333334
+>>>>>>> parent of 825931b (0610_temp_save)
   m_TimeScale: 1
-  Maximum Particle Timestep: 0.033
+  Maximum Particle Timestep: 0.03

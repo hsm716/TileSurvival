@@ -4,16 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Wall
+  - Shootable
   - floor
-  - ring
+  - EquipPoint
   - Flame
   - Enemy
   - Bullet
-  - Aggro
+  - Wall
   - bomb
-  - EquipPoint
   - spike
+  - ring
+  - Aggro
   layers:
   - Default
   - TransparentFX
@@ -23,13 +24,13 @@ TagManager:
   - UI
   - 
   - 
-  - Player
+  - Lighting
+  - Ground
+  - Postprocessing
   - Enemy
+  - Player
   - Bullet
   - PlayerAttack
-  - 
-  - 
-  - FlyingEnemies
   - 
   - 
   - 
@@ -48,6 +49,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Fire
+    uniqueID: 3804908061
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

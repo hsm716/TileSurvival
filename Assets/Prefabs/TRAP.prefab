@@ -141,8 +141,6 @@ MonoBehaviour:
   - {fileID: 3737763624813724868}
   - {fileID: 8823698105779194341}
   - {fileID: 6948455916495059245}
-  FireBall_tmp: {fileID: 6458852676787096148, guid: cd5af2276d1126844b429b93fda403ed,
-    type: 3}
   select_dir: 0
 --- !u!1 &2603110154703870844
 GameObject:

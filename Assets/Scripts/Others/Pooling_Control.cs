@@ -92,7 +92,7 @@ public class Pooling_Control : MonoBehaviour
                 InsertQueue(Enemy_zombie, 5);
             }
         }
-        for (int i = 0; i < 300; i++)
+        for (int i = 0; i < 500; i++)
         {
             GameObject go = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
             InsertQueue(go, 200);

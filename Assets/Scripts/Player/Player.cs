@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
 
     //플레이어 이동속도 or 대쉬속도 or 회전 속도
     [SerializeField]
-    private float moveSpeed = 10f;
+    private float moveSpeed = 20f;
     private float runSpeed;
     [SerializeField]
     private float rotateSpeed;
@@ -78,6 +78,7 @@ public class Player : MonoBehaviour
     public LayerMask whatIsEnemy;
     Collider[] enemies;
 
+    public int Tile_Combo_cnt;
     void Awake()
     {
         instance = this;
@@ -127,7 +128,9 @@ public class Player : MonoBehaviour
         }
         Run();
         Dash();
+
     }
+
 
     void SetStat()
     {
@@ -171,9 +174,10 @@ public class Player : MonoBehaviour
     
     void Update()
     {
-        
         h = joystick.Horizontal;
         v = joystick.Vertical;
+
+
 
         //HP
         if (Player_HP >= 100)
@@ -253,7 +257,7 @@ public class Player : MonoBehaviour
             return;
         }
         
-        moveSpeed = 40f;
+        moveSpeed = 100f;
         isDashing = false;
     }
     void Turn()

@@ -43,21 +43,22 @@ public class Camera_ : MonoBehaviour
 
         //Application.targetFrameRate = 60;
     }
-
+    public float smoothSpeed = 0.125f;
     // Update is called once per frame
-    void LateUpdate()
+    void FixedUpdate()
     {
         cameraPosition.y = player.transform.position.y + offsetY;
         cameraPosition.x = player.transform.position.x + offsetX;
         cameraPosition.z = player.transform.position.z + offsetZ;
-  
-
-/*        cameraPosition.x = Mathf.Clamp(cameraPosition.x, -54.80301f, 54.40301f);
-
-        cameraPosition.z = Mathf.Clamp(cameraPosition.z, -38.74083f, 38.74083f);
-*/
 
 
+        /*        cameraPosition.x = Mathf.Clamp(cameraPosition.x, -54.80301f, 54.40301f);
+
+                cameraPosition.z = Mathf.Clamp(cameraPosition.z, -38.74083f, 38.74083f);
+        */
+
+
+        //Vector3 smoothedPosition = Vector3.Lerp(transform.position, cameraPosition, smoothSpeed);
         transform.position = cameraPosition;
 
         if (ShakeTime > 0)
